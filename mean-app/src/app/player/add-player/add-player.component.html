@@ -1,0 +1,51 @@
+<div class="container">
+    <form (ngSubmit)="insertData()" [formGroup]="form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name" [ngClass]="{ 'is-invalid':submitted && f['name'].errors }" class="form-control" placeholder="Enter Name">
+
+            <div *ngIf="submitted && f['name'].errors" class="invalid-feedback"></div>
+            <div *ngIf="f['name'].errors">Name is required</div>
+        </div>
+        <div class="form-group">
+            <label for="jersey_number">Jersey Number</label>
+            <input type="text" formControlName="jersey_number" class="form-control" placeholder="Enter Jersey Number">
+
+            <div *ngIf="submitted && f['jersey_number'].errors" class="invalid-feedback"></div>
+            <div *ngIf="f['jersey_number'].errors">Jersey Number is required</div>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary</label>
+            <input type="text" formControlName="salary" class="form-control" placeholder="Enter Salary">
+
+            <div *ngIf="submitted && f['salary'].errors" class="invalid-feedback"></div>
+            <div *ngIf="f['salary'].errors">Salary is required</div>
+        </div>
+        <div class="form-group">
+            <label for="ppg">PPG</label>
+            <input type="text" formControlName="ppg" class="form-control" placeholder="Enter PPG">
+
+            <div *ngIf="submitted && f['ppg'].errors" class="invalid-feedback"></div>
+            <div *ngIf="f['ppg'].errors">PPG is required</div>
+        </div>
+        <div class="form-group">
+            <label for="rpg">RPG</label>
+            <input type="text" formControlName="rpg" class="form-control" placeholder="Enter RPG">
+
+            <div *ngIf="submitted && f['rpg'].errors" class="invalid-feedback"></div>
+            <div *ngIf="f['rpg'].errors">RPG is required</div>
+        </div>
+        <div class="form-group">
+            <label for="apg">APG</label>
+            <input type="text" formControlName="apg" class="form-control" placeholder="Enter APG">
+
+            <div *ngIf="submitted && f['apg'].errors" class="invalid-feedback"></div>
+            <div *ngIf="f['apg'].errors">APG is required</div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-dark btn-sm">Submit</button>
+        </div>
+
+    </form>
+</div>
